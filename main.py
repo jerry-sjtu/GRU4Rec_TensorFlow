@@ -12,8 +12,8 @@ import argparse
 import model
 import evaluation
 
-PATH_TO_TRAIN = '/PATH/TO/rsc15_train_full.txt'
-PATH_TO_TEST = '/PATH/TO/rsc15_test.txt'
+PATH_TO_TRAIN = '/Users/qiangwang/Data/recsys/yoochoose-data/yoochoose-clicks.dat'
+PATH_TO_TEST = '/Users/qiangwang/Data/recsys/yoochoose-data/yoochoose-test.dat'
 
 class Args():
     is_training = False
@@ -30,7 +30,7 @@ class Args():
     reset_after_session = True
     session_key = 'SessionId'
     item_key = 'ItemId'
-    time_key = 'Time'
+    time_key = 'Timestamp'
     grad_cap = 0
     test_model = 2
     checkpoint_dir = './checkpoint'
@@ -57,8 +57,10 @@ def parseArgs():
 
 if __name__ == '__main__':
     command_line = parseArgs()
-    data = pd.read_csv(PATH_TO_TRAIN, sep='\t', dtype={'ItemId': np.int64})
-    valid = pd.read_csv(PATH_TO_TEST, sep='\t', dtype={'ItemId': np.int64})
+    # data.dtypes
+    # data.describe()
+    data = pd.read_csv(PATH_TO_TRAIN, header=None, names=['SessionId', 'Timestamp', 'ItemId', 'Label'], sep=',', dtype={'ItemId': np.int64}, parse_dates=['Timestamp'])
+    valid = pd.read_csv(PATH_TO_TEST, header=None, names=['SessionId', 'Timestamp', 'ItemId', 'Label'], sep=',', dtype={'ItemId': np.int64}, parse_dates=['Timestamp'])
     args = Args()
     args.n_items = len(data['ItemId'].unique())
     args.layers = command_line.layer
