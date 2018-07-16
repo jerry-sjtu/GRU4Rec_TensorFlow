@@ -220,7 +220,6 @@ class GRU4Rec:
                     start[idx] = offset_sessions[session_idx_arr[maxiter]]
                     end[idx] = offset_sessions[session_idx_arr[maxiter]+1]
                 if len(mask) and self.reset_after_session:
-                if len(mask) and self.reset_after_session:
                     for i in range(self.layers):
                         state[i][mask] = 0
             

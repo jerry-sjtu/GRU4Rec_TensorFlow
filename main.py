@@ -59,8 +59,8 @@ if __name__ == '__main__':
     command_line = parseArgs()
     # data.dtypes
     # data.describe()
-    data = pd.read_csv(PATH_TO_TRAIN, header=None, names=['SessionId', 'Timestamp', 'ItemId', 'Label'], sep=',', dtype={'ItemId': np.int64}, parse_dates=['Timestamp'])
-    valid = pd.read_csv(PATH_TO_TEST, header=None, names=['SessionId', 'Timestamp', 'ItemId', 'Label'], sep=',', dtype={'ItemId': np.int64}, parse_dates=['Timestamp'])
+    data = pd.read_csv(PATH_TO_TRAIN, header=None, names=['SessionId', 'Timestamp', 'ItemId', 'Label'], sep=',', dtype={'SessionId': np.int32, 'ItemId': np.int64}, parse_dates=['Timestamp'])
+    valid = pd.read_csv(PATH_TO_TEST, header=None, names=['SessionId', 'Timestamp', 'ItemId', 'Label'], sep=',', dtype={'SessionId': np.int32, 'ItemId': np.int64}, parse_dates=['Timestamp'])
     args = Args()
     args.n_items = len(data['ItemId'].unique())
     args.layers = command_line.layer
