@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="447c8912-3bca-447c-b9bf-4876f1a05448" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.ipynb_checkpoints/demo4rec-checkpoint.ipynb" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/demo4rec-checkpoint.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.ipynb_checkpoints/graph-checkpoint.ipynb" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/graph-checkpoint.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo4rec.ipynb" afterPath="$PROJECT_DIR$/demo4rec.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/graph.ipynb" afterPath="$PROJECT_DIR$/graph.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rnn_01.ipynb" afterPath="$PROJECT_DIR$/rnn_01.ipynb" />
-    </list>
+    <list default="true" id="447c8912-3bca-447c-b9bf-4876f1a05448" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
